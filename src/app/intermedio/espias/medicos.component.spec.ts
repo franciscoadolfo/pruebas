@@ -35,7 +35,7 @@ describe('MedicosComponent', () => {
         expect( componente.medicos.indexOf(medico)).toBeGreaterThanOrEqual(0);
     })
 
-    it('Si fall la adición, la propiedad mensajeError, debe ser igual al error del servicio', () =>{
+    it('Si falla la adición, la propiedad mensajeError, debe ser igual al error del servicio', () =>{
         const miError = 'No se pudo agregar al médico';
         spyOn(servicio, 'agregarMedico').and.returnValue(throwError( miError ));
         componente.agregarMedico();
